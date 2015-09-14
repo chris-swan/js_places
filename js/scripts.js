@@ -52,13 +52,10 @@ $(document).ready(function() {
         $(".place-visited").text(newPlace.placeVisited);
         $(".date").text(newPlace.date);
 
-
         $("ul#locations").text("");
         newPlace.locations.forEach(function(location) {
           $("ul#locations").append("<li>" + location.locationName + ", " + location.photo + ", " + location.journal + "</li>");
 
-          // console.log (inputtedLocationName)
-          //debugger;
         });
       $("input#new-place-visited").val("");
       $("input#new-date").val("");

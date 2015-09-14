@@ -11,3 +11,10 @@
   text-decoration: underline;
 }
 test
+
+/*div, body, html  {
+    background-image: url(http://placehold.it/350x150);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}*/

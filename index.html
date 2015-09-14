@@ -17,7 +17,7 @@
 
       <div class="row">
         <div class="col-md-6">
-          <h2>Add a contact:</h2>
+          <h2>Add a Place you visited:</h2>
           <form id="new-place">
             <div class="form-group">
               <label for="new-place-visited">Place Visited</label>
@@ -28,15 +28,15 @@
               <input type="text" class="form-control" id="new-date">
             </div>
 
-            <div id="new-places">
+            <div id="new-locations">
                 <div class="new-location">
                   <div class="form-group">
-                    <label for="new-location-name">Location name</label>
-                    <input type="text" class="form-control" id="new-location-name">
+                    <label for="new-locationName">Location name</label>
+                    <input type="text"  class="form-control new-locationName">
                   </div>
                   <div class="form-group">
                     <label for="new-photo">Location photos </label>
-                    <input type="text" class="form-control" id="new-photo">
+                    <input type="text" class="form-control new-photo">
                   </div>
                   <div class="form-group">
                     <label for="new-journal">Journal Notes: </label>
@@ -45,7 +45,7 @@
                 </div>
               </div>
 
-            <span class="btn btn-primary" id="add-address">Another address</span>
+            <span class="btn btn-primary" id="add-location">Add Another Location</span>
 
             <button type="submit" class="btn">Add</button>
           </form>
@@ -58,12 +58,11 @@
 
         <div class="col-md-6">
           <div id="show-place">
-            <h2></h2>
 
-            <p>place-visited: <span class="place-visited"></span></p>
-            <p>date: <span class="date"></span></p>
+            <p>Place Visited: <span class="place-visited"></span></p>
+            <p>Date: <span class="date"></span></p>
             <p>Show Details:</p>
-            <ul id="details">
+            <ul id="locations">
 
             </ul>
           </div>
@@ -74,6 +73,3 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
 </html>
-
-
-------------

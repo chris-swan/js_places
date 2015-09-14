@@ -1,10 +1,10 @@
-// keeps hidden but eventually appends new location-name, photo , journal to form
+// keeps hidden but eventually appends new locationName, photo , journal to form
 $(document).ready(function() {
   $("#add-location").click(function() {
-    $("#new-locationes").append('<div class="new-location">' +
+    $("#new-locations").append('<div class="new-location">' +
                                  '<div class="form-group">' +
-                                   '<label for="new-location-name">location-name</label>' +
-                                   '<input type="text" class="form-control new-location-name">' +
+                                   '<label for="new-locationName">location name</label>' +
+                                   '<input type="text" class="form-control new-locationName">' +
                                  '</div>' +
                                  '<div class="form-group">' +
                                    '<label for="new-photo">photo</label>' +
@@ -22,45 +22,49 @@ $(document).ready(function() {
   $("form#new-place").submit(function(event) {
       event.preventDefault();
 
-      var inputtedplaceVisited = $("input#new-place-visted").val();
-      var inputteddate = $("input#new-date").val();
+      var inputtedPlaceVisited = $("input#new-place-visited").val();
+      var inputtedDate = $("input#new-date").val();
 
-      var newplace = { placeVisited: inputtedplaceVisited,
-                          date: inputteddate,
-                          locationes: [] };
+      var newPlace = { placeVisited: inputtedPlaceVisited,
+                          date: inputtedDate,
+                          locations: [] };
 
 // new locations object
       $(".new-location").each(function() {
-        var inputtedlocation-name = $(this).find("input.new-location-name").val();
-        var inputtedphoto = $(this).find("input.new-photo").val();
-        var inputtedjournal = $(this).find("input.new-journal").val();
+        var inputtedLocationName = $(this).find("input.new-locationName").val();
+        var inputtedPhoto = $(this).find("input.new-photo").val();
+        var inputtedJournal = $(this).find("input.new-journal").val();
 
-        var newlocation = { location-name: inputtedlocation-name, photo: inputtedphoto, journal: inputtedjournal };
-        newplace.locationes.push(newlocation);
+        var newLocation = { locationName: inputtedLocationName, photo: inputtedPhoto, journal: inputtedJournal };
+        newPlace.locations.push(newLocation);
       });
-
 // list places object ?
       $("ul#places").append("<li><span class='place'>" +
-                                newplace.placeVisited +
-                                " " + newplace.date +
+                                newPlace.placeVisited +
+                                " " + newPlace.date +
                                 "</span></li>");
 
-      $("input#new-place-visted").val("");
-      $("input#new-date").val("");
-      $("input.new-location-name").val("");
-      $("input.new-photo").val("");
-      $("input.new-journal").val("")
 
       $(".place").last().click(function() {
         $("#show-place").show();
-        $("#show-place h2").text(newplace.placeVisited);
-        $(".place-visted").text(newplace.placeVisited);
-        $(".date").text(newplace.date);
 
-        $("ul#locationes").text("");
-        newplace.locationes.forEach(function(location) {
-          $("ul#locationes").append("<li>" + location.location-name + ", " + location.photo + ", " + location.journal + "</li>");
+        $("#show-place h2").text(newPlace.placeVisited);
+        $(".place-visited").text(newPlace.placeVisited);
+        $(".date").text(newPlace.date);
+
+
+        $("ul#locations").text("");
+        newPlace.locations.forEach(function(location) {
+          $("ul#locations").append("<li>" + location.locationName + ", " + location.photo + ", " + location.journal + "</li>");
+
+          // console.log (inputtedLocationName)
+          //debugger;
         });
+      $("input#new-place-visited").val("");
+      $("input#new-date").val("");
+      $("input.new-locationName").val("");
+      $("input.new-photo").val("");
+      $("input.new-journal").val("");
       });
     });
   });

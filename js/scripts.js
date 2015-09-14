@@ -1,65 +1,65 @@
-// keeps hidden but eventually appends new street, city , state to form
+// keeps hidden but eventually appends new location-name, photo , journal to form
 $(document).ready(function() {
-  $("#add-address").click(function() {
-    $("#new-addresses").append('<div class="new-address">' +
+  $("#add-location").click(function() {
+    $("#new-locationes").append('<div class="new-location">' +
                                  '<div class="form-group">' +
-                                   '<label for="new-street">Street</label>' +
-                                   '<input type="text" class="form-control new-street">' +
+                                   '<label for="new-location-name">location-name</label>' +
+                                   '<input type="text" class="form-control new-location-name">' +
                                  '</div>' +
                                  '<div class="form-group">' +
-                                   '<label for="new-city">City</label>' +
-                                   '<input type="text" class="form-control new-city">' +
+                                   '<label for="new-photo">photo</label>' +
+                                   '<input type="text" class="form-control new-photo">' +
                                  '</div>' +
                                  '<div class="form-group">' +
-                                   '<label for="new-state">State</label>' +
-                                   '<input type="text" class="form-control new-state">' +
+                                   '<label for="new-journal">journal</label>' +
+                                   '<input type="text" class="form-control new-journal">' +
                                  '</div>' +
                                '</div>');
   });
 
 
-// new contact
-  $("form#new-contact").submit(function(event) {
+// new place
+  $("form#new-place").submit(function(event) {
       event.preventDefault();
 
-      var inputtedFirstName = $("input#new-first-name").val();
-      var inputtedLastName = $("input#new-last-name").val();
+      var inputtedplaceVisited = $("input#new-place-visted").val();
+      var inputteddate = $("input#new-date").val();
 
-      var newContact = { firstName: inputtedFirstName,
-                          lastName: inputtedLastName,
-                          addresses: [] };
+      var newplace = { placeVisited: inputtedplaceVisited,
+                          date: inputteddate,
+                          locationes: [] };
 
-// new addresss object
-      $(".new-address").each(function() {
-        var inputtedStreet = $(this).find("input.new-street").val();
-        var inputtedCity = $(this).find("input.new-city").val();
-        var inputtedState = $(this).find("input.new-state").val();
+// new locations object
+      $(".new-location").each(function() {
+        var inputtedlocation-name = $(this).find("input.new-location-name").val();
+        var inputtedphoto = $(this).find("input.new-photo").val();
+        var inputtedjournal = $(this).find("input.new-journal").val();
 
-        var newAddress = { street: inputtedStreet, city: inputtedCity, state: inputtedState };
-        newContact.addresses.push(newAddress);
+        var newlocation = { location-name: inputtedlocation-name, photo: inputtedphoto, journal: inputtedjournal };
+        newplace.locationes.push(newlocation);
       });
 
-// list contacts object ?
-      $("ul#contacts").append("<li><span class='contact'>" +
-                                newContact.firstName +
-                                " " + newContact.lastName +
+// list places object ?
+      $("ul#places").append("<li><span class='place'>" +
+                                newplace.placeVisited +
+                                " " + newplace.date +
                                 "</span></li>");
 
-      $("input#new-first-name").val("");
-      $("input#new-last-name").val("");
-      $("input.new-street").val("");
-      $("input.new-city").val("");
-      $("input.new-state").val("")
+      $("input#new-place-visted").val("");
+      $("input#new-date").val("");
+      $("input.new-location-name").val("");
+      $("input.new-photo").val("");
+      $("input.new-journal").val("")
 
-      $(".contact").last().click(function() {
-        $("#show-contact").show();
-        $("#show-contact h2").text(newContact.firstName);
-        $(".first-name").text(newContact.firstName);
-        $(".last-name").text(newContact.lastName);
+      $(".place").last().click(function() {
+        $("#show-place").show();
+        $("#show-place h2").text(newplace.placeVisited);
+        $(".place-visted").text(newplace.placeVisited);
+        $(".date").text(newplace.date);
 
-        $("ul#addresses").text("");
-        newContact.addresses.forEach(function(address) {
-          $("ul#addresses").append("<li>" + address.street + ", " + address.city + ", " + address.state + "</li>");
+        $("ul#locationes").text("");
+        newplace.locationes.forEach(function(location) {
+          $("ul#locationes").append("<li>" + location.location-name + ", " + location.photo + ", " + location.journal + "</li>");
         });
       });
     });

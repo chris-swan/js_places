@@ -13,21 +13,23 @@
   </head>
   <body>
     <div class="container">
-      <h1>Vacataion tracker</h1>
+      <h1>Vacation tracker</h1>
 
       <div class="row">
         <div class="col-md-6">
           <h2>Add a Place you visited:</h2>
           <form id="new-place">
             <div class="form-group">
-              <label for="new-place-visited">Place Visited</label>
+              <label for="new-place-visited">General place/vacation</label>
               <input type="text" class="form-control" id="new-place-visited">
             </div>
             <div class="form-group">
-              <label for="new-date">Date</label>
+              <label for="new-date">Date of trip</label>
               <input type="text" class="form-control" id="new-date">
             </div>
-
+            <br>
+            <h3>List some specific stops and info from the trip:</h3>
+            <br>
             <div id="new-locations">
                 <div class="new-location">
                   <div class="form-group">
@@ -39,7 +41,7 @@
                     <input type="text" class="form-control new-photo">
                   </div>
                   <div class="form-group">
-                    <label for="new-journal">Journal Notes: </label>
+                    <label for="new-journal">Journal/location notes: </label>
                     <input type="text" class="form-control new-journal">
                   </div>
                 </div>
@@ -50,9 +52,8 @@
             <button type="submit" class="btn">Add</button>
           </form>
 
-          <h2>Places:</h2>
+          <h2>List of past trips you've added:</h2>
           <ul id="places">
-
           </ul>
         </div>
 

@@ -3,15 +3,15 @@ $(document).ready(function() {
   $("#add-location").click(function() {
     $("#new-locations").append('<div class="new-location">' +
                                  '<div class="form-group">' +
-                                   '<label for="new-locationName">location name</label>' +
+                                   '<label for="new-locationName">Location name</label>' +
                                    '<input type="text" class="form-control new-locationName">' +
                                  '</div>' +
                                  '<div class="form-group">' +
-                                   '<label for="new-photo">photo</label>' +
+                                   '<label for="new-photo">Location photos</label>' +
                                    '<input type="text" class="form-control new-photo">' +
                                  '</div>' +
                                  '<div class="form-group">' +
-                                   '<label for="new-journal">journal</label>' +
+                                   '<label for="new-journal">Journal/location notes:</label>' +
                                    '<input type="text" class="form-control new-journal">' +
                                  '</div>' +
                                '</div>');

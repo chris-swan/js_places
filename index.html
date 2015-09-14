@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>place book</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>place</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Add a location:</h2>
+          <form id="new-place">
+            <div class="form-group">
+              <label for="new-location-name">Location name</label>
+              <input type="text" class="form-control" id="new-location-name">
+
+              <label for="new-landmark-name">Location Landmarks </label>
+              <input type="text" class="form-control" id="new-landmark-name">
+
+              <label for="new-date">Time of Year  </label>
+              <input type="text" class="form-control" id="new-timeofyear">
+            </div>
+            <span class="btn btn-primary" id="add-info">Add info</span>
+            <button type="submit" class="btn">Add</button>
+          </form>
+<!-- //to be new places?? -->
+          <div id="new-places">
+              <div class="new-location">
+                <div class="form-group">
+                  <label for="new-location-name">location</label>
+                  <input type="text" class="form-control new-location">
+                </div>
+                <div class="form-group">
+                  <label for="new-landmark">Landmark</label>
+                  <input type="text" class="form-control new-landmark">
+                </div>
+                <div class="form-group">
+                  <label for="new-date">Date</label>
+                  <input type="text" class="form-control new-date">
+                </div>
+              </div>
+            </div>
+
+            <span class="btn btn-primary" id="add-place">Another Place</span>
+
+            <button type="submit" class="btn">Add</button>
+          </form>
+
+          <h2>locations:</h2>
+          <ul id="locations">
+
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <div id="show-location">
+            <h2></h2>
+
+            <p>Location name: <span class="location-name"></span></p>
+            <!-- <p>Last name: <span class="last-name"></span></p> -->
+            <p>additional info:</p>
+            <ul id="additional_info">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>

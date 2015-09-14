@@ -64,19 +64,3 @@ $(document).ready(function() {
       });
     });
   });
-
-
-
-
-//
-// $(document).ready(function() {
-//     $("form#roman").submit(function(event) {
-//         var input = ($("input#input").val());
-//         var result = romanNumerizer(input);
-//
-//         $(".output").text(result);
-//
-//         $("#result").show();
-//         event.preventDefault();
-//     });
-// });
